@@ -28,8 +28,24 @@ struct ContentView: View {
                 .font(.title2)
             
             // Les boutons
+            
+            HStack {
+                ForEach(0..<3) { number in
+                    Button {
+                        // Action
+                        self.playerMove(number)
+                    } label: {
+                        Text(self.moves[number])
+                            .font(.system(size: 50))
+                    }
+                }
+            }
         }
         .padding()
+    }
+    
+    func playerMove(_ playerChoice: Int) {
+        // on va gérer le choix du joueur
     }
 }
 
