@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let moves = ["Rock", "Paper", "Scissors"]
+    let moves = ["✊", "✋", "✌️"]
     
     @State private var appMove = 0 // Le choix de l'app qui changera au hazard
     @State private var shouldWin = true // Si le joueur doit gagner ou perdre
@@ -17,7 +17,7 @@ struct ContentView: View {
     @State private var questionCount = 0 // Le nombre de tours joués
     
     var body: some View {
-        VStack {
+        VStack(spacing: 50) {
             Text("Score : \(score)")
                 .font(.largeTitle)
             
